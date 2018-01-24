@@ -1,5 +1,6 @@
 import ftplib
 
+
 class ftp():
 
     def __init__(self, user_name, password):
@@ -31,7 +32,11 @@ class ftp():
         # close file and FTP
         file.close()     
         """
+
+    def disconnect(self):
         self.session.quit()
+        print "Logged out"
+
 
 if __name__ == '__main__':
     # values to input
@@ -42,8 +47,10 @@ if __name__ == '__main__':
     cid = 'VAH60142'
 
     print "START placing file..."
-    uploader = ftp()
+    uploader = ftp(user_name, password)
     # ftp().ftp_upload(ftp().ftp_login(user_name, password), cid)
     uploader.ftp_login(user_name, password)
-    uploader.ftp_upload(cid)
+
+    uploader.disconnect()
+    # uploader.ftp_upload(cid)
     print "FINISH placing file..."
