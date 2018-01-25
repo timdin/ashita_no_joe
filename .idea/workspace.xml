@@ -17,8 +17,8 @@
       <file leaf-file-name="place_file.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/place_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1007">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="203">
+              <caret line="42" column="29" lean-forward="true" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
               <folding>
                 <element signature="e#251#264#0" expanded="true" />
               </folding>
@@ -186,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516866100145</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="move the files that are already uploaded to another folder">
+      <created>1516871824022</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1516871824022</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -217,11 +224,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="upload file via ftp" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload file via ftp" />
+    <MESSAGE value="move the files that are already uploaded to another folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="move the files that are already uploaded to another folder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="28" />
+      <option name="time" value="32" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -270,8 +278,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/place_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1007">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="203">
+          <caret line="42" column="29" lean-forward="true" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
           <folding>
             <element signature="e#251#264#0" expanded="true" />
           </folding>

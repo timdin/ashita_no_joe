@@ -39,7 +39,7 @@ class Ftp():
         # copy file from local to qfarok via ftp #
         local_file_list = os.listdir(local_path)
         # will raise exception if the local folder is empty
-        if (not local_file_list) or ["uploaded"]:
+        if not local_file_list or ("." not in local_file_list[0] and "." not in local_file_list[-1]):
             self.disconnect()
             raise Exception("Please put your file in '" + local_path + "' before upload")
         print "Local Files: " + str(local_file_list)
