@@ -24,7 +24,7 @@ class FTP():
         try:
             self.session = ftplib.FTP(host, user_name, password)
             print "Successfully logged in FTP with: " + user_name
-            print self.session.getwelcome()
+            # print self.session.getwelcome()
         except:
             raise Exception("Failed to Login FTP with user: " + user_name)
 
@@ -60,7 +60,7 @@ class FTP():
         for local_file_move in self.local_file_list:
             if not os.path.exists(uploaded_folder):
                 os.makedirs(uploaded_folder)
-                print "Folder " + uploaded_folder + " created"
+                print "Folder Created: " + uploaded_folder
             if "." in local_file_move:
                 shutil.copyfile(local_path + "/" + local_file_move, uploaded_folder + '/' + local_file_move)
                 os.remove(local_path + "/" + local_file_move)
@@ -68,7 +68,7 @@ class FTP():
 
     def disconnect(self):
         self.session.quit()
-        print "Disconnected from qfarok FTP server"
+        # print "Disconnected from qfarok FTP server"
 
 
 if __name__ == '__main__':

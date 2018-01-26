@@ -33,8 +33,9 @@ class SSH():
         go_to_folder = "cd user/local/bin"
         upload_script = "WN_IMPORT.EXEC " + cid + " " + claim_type
         self.ssh.exec_command(go_to_folder)
+        print "Start Uploading Files..."
         self.ssh.exec_command(upload_script)
-        print "---SUCCESSFULLY UPLOAD FILE IN CID " + cid + " !---"
+        print ">>>SUCCESSFULLY UPLOAD FILE TO CID " + cid + " !<<<"
 
 
 if __name__ == '__main__':
@@ -49,6 +50,7 @@ if __name__ == '__main__':
     ftp = place_file.FTP(user_name, password)
     ftp.ftp_place(cid)
     ftp.disconnect()
+    print "------------------------------------"
     ssh = SSH(user_name, password)
     ssh.upload_file(cid)
     ftp.move_files()

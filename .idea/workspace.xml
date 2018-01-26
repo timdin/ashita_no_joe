@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e9dabbc-f7a1-448f-8fd2-45f0f2170bfd" name="Default" comment="1. finish uploading file&#10;2. change the class name of ftp">
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload_file.py" />
+    <list default="true" id="9e9dabbc-f7a1-448f-8fd2-45f0f2170bfd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/place_file.py" afterPath="$PROJECT_DIR$/place_file.py" />
+      <change beforePath="$PROJECT_DIR$/upload_file.py" afterPath="$PROJECT_DIR$/upload_file.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +18,8 @@
       <file leaf-file-name="place_file.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/place_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+            <state relative-caret-position="362">
+              <caret line="70" column="53" lean-forward="true" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
               <folding>
                 <element signature="e#251#264#0" expanded="true" />
               </folding>
@@ -30,8 +30,8 @@
       <file leaf-file-name="upload_file.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/upload_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+            <state relative-caret-position="700">
+              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding>
                 <element signature="e#222#237#0" expanded="true" />
               </folding>
@@ -57,8 +57,8 @@
       <list>
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/example.py" />
-        <option value="$PROJECT_DIR$/upload_file.py" />
         <option value="$PROJECT_DIR$/place_file.py" />
+        <option value="$PROJECT_DIR$/upload_file.py" />
       </list>
     </option>
   </component>
@@ -241,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516948483900</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1. finish uploading file&#10;2. change the class name of ftp">
+      <created>1516953867050</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1516953867050</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -253,7 +260,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1957672" sideWeight="0.50208336" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1957672" sideWeight="0.49791667" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1904762" sideWeight="0.49791667" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -275,7 +282,8 @@
     <MESSAGE value="move the files that are already uploaded to another folder" />
     <MESSAGE value="fix Exception" />
     <MESSAGE value="1. add move_files module&#10;2. will not upload file if there are no files include &quot;.&quot; in the UPLOAD FOLDER" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. add move_files module&#10;2. will not upload file if there are no files include &quot;.&quot; in the UPLOAD FOLDER" />
+    <MESSAGE value="1. finish uploading file&#10;2. change the class name of ftp" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. finish uploading file&#10;2. change the class name of ftp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -336,8 +344,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/place_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+        <state relative-caret-position="362">
+          <caret line="70" column="53" lean-forward="true" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
           <folding>
             <element signature="e#251#264#0" expanded="true" />
           </folding>
@@ -346,8 +354,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/upload_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        <state relative-caret-position="700">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="e#222#237#0" expanded="true" />
           </folding>
