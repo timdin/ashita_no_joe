@@ -1,4 +1,4 @@
-# Written by Chanel Chen on 2017/01/25.
+# Written by Chanel Chen on 2017/01/26.
 # Script Description:
 # 1) FTP login
 # 2) Place the file(s) from local to qfarok via ftp
@@ -29,43 +29,47 @@ class Ftp():
             raise Exception("Failed to Login with user: " + user_name)
 
     def ftp_place(self, cid, local_path = "C:\Automation\Upload File"):
-
         # go to the correct path in qfarok to copy EDI files #
-        #TODO: if there are more then 1 cids in string "cid", then separate with ","
+        #TODO: if there are more then 1 cids in string "cid", then separate by ","
         qfarok_path = '/prod/edicomm/v4/' + cid + '/in'
         if self.session.pwd() != qfarok_path:
             self.session.cwd(qfarok_path)
 
         # copy file from local to qfarok via ftp #
-        local_file_list = os.listdir(local_path)
+        self.local_file_list = os.listdir(local_path)
         # will raise exception if the local folder is empty
-        if not local_file_list or ("." not in local_file_list[0] and "." not in local_file_list[-1]):
+        check_file_boolean = False
+        for check_file in self.local_file_list:
+            if "." in check_file:
+                check_file_boolean = True
+        if not self.local_file_list or not check_file_boolean:
             self.disconnect()
             raise Exception("Please put your file in '" + local_path + "' before upload")
-        print "Local Files: " + str(local_file_list)
-        for local_file in local_file_list:
+        print "Local Files: " + str(self.local_file_list)
+        for local_file in self.local_file_list:
             ftp_file = qfarok_path + '/' + local_file
             if "." in local_file:
                 lf = open(local_path + '/' + local_file, "rb")
                 ff = "STOR " + ftp_file
                 self.session.storbinary(ff, lf)
-                print "Transfer completed for '" + local_file + "' in folder " + qfarok_path
+                print "Transfer completed for '" + local_file + "' in qfarok folder " + qfarok_path
                 lf.close()
 
+    def move_files(self, local_path = "C:\Automation\Upload File"):
         # move files to another directory #
         uploaded_folder = local_path + '\uploaded'
-        for local_file_move in local_file_list:
+        for local_file_move in self.local_file_list:
             if not os.path.exists(uploaded_folder):
                 os.makedirs(uploaded_folder)
                 print "Folder " + uploaded_folder + " created"
             if "." in local_file_move:
-                shutil.copy2(local_path + "/" + local_file_move, uploaded_folder + '/' + local_file_move)
+                shutil.copyfile(local_path + "/" + local_file_move, uploaded_folder + '/' + local_file_move)
                 os.remove(local_path + "/" + local_file_move)
-                print("File moved: " + local_file_move)
+                # print ("File moved: " + local_file_move)
 
     def disconnect(self):
         self.session.quit()
-        print "Disconnected"
+        print "Disconnected from qfarok FTP server"
 
 
 if __name__ == '__main__':
@@ -79,3 +83,4 @@ if __name__ == '__main__':
     uploader = Ftp(user_name, password)
     uploader.ftp_place(cid)
     uploader.disconnect()
+    uploader.move_files()
