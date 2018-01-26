@@ -1,4 +1,4 @@
-# Written by Chanel Chen on 2017/01/26.
+# Written by Chanel Chen on 2018/01/26.
 # Script Description:
 # 1) FTP login
 # 2) Place the file(s) from local to qfarok via ftp
@@ -9,7 +9,7 @@ import os
 import shutil
 
 
-class Ftp():
+class FTP():
 
     def __init__(self, user_name="", password=""):
         if user_name and password:
@@ -20,17 +20,16 @@ class Ftp():
     def ftp_login(self, user_name, password):
         # login #
         host = '10.145.177.28'
-        print "Logging in..."
+        print "Logging in FTP..."
         try:
             self.session = ftplib.FTP(host, user_name, password)
-            print "Successfully logged in with: " + user_name
+            print "Successfully logged in FTP with: " + user_name
             print self.session.getwelcome()
         except:
-            raise Exception("Failed to Login with user: " + user_name)
+            raise Exception("Failed to Login FTP with user: " + user_name)
 
     def ftp_place(self, cid, local_path = "C:\Automation\Upload File"):
         # go to the correct path in qfarok to copy EDI files #
-        #TODO: if there are more then 1 cids in string "cid", then separate by ","
         qfarok_path = '/prod/edicomm/v4/' + cid + '/in'
         if self.session.pwd() != qfarok_path:
             self.session.cwd(qfarok_path)
@@ -80,7 +79,7 @@ if __name__ == '__main__':
     password = 'AsdAsd4589===='
     cid = 'VAH60142'
 
-    uploader = Ftp(user_name, password)
+    uploader = FTP(user_name, password)
     uploader.ftp_place(cid)
     uploader.disconnect()
     uploader.move_files()
