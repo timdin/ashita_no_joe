@@ -14,8 +14,8 @@ class FTP():
     def __init__(self, user_name="", password=""):
         if user_name and password:
             self.ftp_login(user_name, password)
-        else:
-            raise Exception("User name and password should not be empty!")
+        # else:
+        #     raise Exception("User name and password should not be empty!")
 
     def ftp_login(self, user_name, password):
         # login #

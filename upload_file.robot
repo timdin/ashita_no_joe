@@ -9,8 +9,11 @@ ${local_path}  C:\Automation\Upload File
 ***Test Cases***
 Test
     [Tags]  Upload File
-    
-    ${result} =  api get  ${url}
-    Log to console  ${result}
-    Log  ${result}
-    Should be equal  ${expected}  ${result}
+    [Setup]  ftp login  ${user_name}  ${password}
+    ftp place  ${cid}
+    [Teardown]  Upload finished
+
+*** Keywords ***
+Upload finished
+    dissconnect
+    move files
