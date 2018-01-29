@@ -29,6 +29,8 @@ class FTP():
             raise Exception("Failed to Login FTP with user: " + user_name)
 
     def ftp_place(self, cid, local_path = "C:\Automation\Upload File"):
+        if not self.session:
+            raise Exception("You're not logged in!")
         # go to the correct path in qfarok to copy EDI files #
         qfarok_path = '/prod/edicomm/v4/' + cid + '/in'
         if self.session.pwd() != qfarok_path:
