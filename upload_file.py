@@ -12,11 +12,13 @@ class SSH():
     def __init__(self, user_name, password):
         hostname = '10.145.177.28'
         self.ssh = paramiko.SSHClient()
+        self.robot_print = "*WARN* "
+        self.robot_info = "*INFO* "
         print "Logging in SSH..."
         try:
             self.ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             self.ssh.connect(hostname, port=22, username=user_name, password=password, timeout=30)
-            print "Successfully logged in SSH with: " + user_name
+            print self.robot_print + "Successfully logged in SSH with: " + user_name
         except:
             raise Exception("Failed to Login SSH with user: " + user_name)
 
@@ -31,12 +33,11 @@ class SSH():
     def upload_file(self, cid):
         claim_type = self.check_claim_type(cid)
         go_to_folder = "cd user/local/bin"
-        upload_script = "WN_IMPORT.EXEC " + cid + " " + claim_type
+        upload_script = "WN_IMPORT.EXEC %s %s"%(str(cid), str(claim_type))
         self.ssh.exec_command(go_to_folder)
-        print "Start Uploading Files..."
+        print self.robot_print + "Start Uploading Files..."
         self.ssh.exec_command(upload_script)
-        print ">>>SUCCESSFULLY UPLOAD FILE TO CID " + cid + " !<<<"
-
+        print self.robot_print + ">>>SUCCESSFULLY UPLOAD FILE TO CID %s !<<<" % (str(cid))
 
 if __name__ == '__main__':
     # values to input
